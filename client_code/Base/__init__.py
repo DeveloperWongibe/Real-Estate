@@ -10,3 +10,8 @@ class Base(BaseTemplate):
     self.content_panel.add_component(Home())
 
     # Any code you write here will run before the form opens.
+
+  def title_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(Home())

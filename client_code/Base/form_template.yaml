@@ -28,6 +28,7 @@ components:
   layout_properties: {slot: title}
   data_bindings: []
   components: []
+  event_bindings: {click: title_click}
 custom_component: true
 properties:
 - {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}

@@ -2,22 +2,28 @@ container:
   type: ColumnPanel
   properties: {background: ''}
 components:
-- name: main
-  properties: {source: _/theme/ouse.jpg, horizontal_align: center, vertical_align: top,
-    display_mode: original_size}
-  type: Image
-  layout_properties: {grid_position: 'BLYOML,BAAKHJ'}
-- name: label
-  properties: {content: "$340000              \n  furnished bungalow house \n4 bedrooms,\
-      \ 1 kitchen, 2  toilets                    \n  .Location: Santa Barbara MA,\
-      \ USA                   ", background: 'theme:Secondary Container'}
-  type: RichText
-  layout_properties: {grid_position: 'XIDZZJ,GSTNSE'}
-- name: button_1
-  properties: {text: 'View Houses
+- name: content_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'IJZQQJ,HKZCXK'}
+  components:
+  - name: main
+    properties: {source: _/theme/ouse.jpg, horizontal_align: center, vertical_align: top,
+      display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'KMLOIZ,UKYKML'}
+  - name: label
+    properties: {content: "$340000              \n  furnished bungalow house \n4 bedrooms,\
+        \ 1 kitchen, 2  toilets                    \n  .Location: Santa Barbara MA,\
+        \ USA                   ", background: 'theme:Secondary Container'}
+    type: RichText
+    layout_properties: {grid_position: 'FEDILS,RNFFMN'}
+    components:
+    - name: view_houses
+      properties: {text: 'View Houses
 
-      ', bold: false, background: 'theme:On Primary Container', icon: 'fa:arrow-right',
-    visible: true, enabled: true}
-  type: Button
-  layout_properties: {grid_position: 'BJQEOR,CGUHXG'}
+          ', bold: false, background: 'theme:On Primary Container', icon: 'fa:arrow-right',
+        visible: true, enabled: true}
+      type: Button
+      event_bindings: {click: view_houses_click}
 is_package: true
