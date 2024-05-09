@@ -1,0 +1,33 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html', background: '', visible: true, foreground: ''}
+  data_bindings:
+  - {property: border, code: 'self.item['''']', writeback: false}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}', background: ''}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: signin
+    properties: {text: Sign In, icon: 'fa:sign-in', background: ''}
+    type: Link
+  - name: my_houses
+    properties: {text: My Houses, icon: 'fa:home'}
+    type: Link
+    components: []
+- name: title
+  properties: {text: Real Estate, icon_align: left, icon: 'fa:angellist'}
+  type: Link
+  layout_properties: {slot: title}
+  data_bindings: []
+  components: []
+custom_component: true
+properties:
+- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}
