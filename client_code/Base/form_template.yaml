@@ -15,13 +15,15 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - name: signin
+  - name: sign_in
     properties: {text: Sign In, icon: 'fa:sign-in', background: ''}
     type: Link
+    event_bindings: {click: sign_in_click}
   - name: my_houses
     properties: {text: My Houses, icon: 'fa:home'}
     type: Link
     components: []
+    event_bindings: {click: my_houses_click}
 - name: title
   properties: {text: Real Estate, icon_align: left, icon: 'fa:angellist'}
   type: Link
