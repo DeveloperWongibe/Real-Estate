@@ -1,5 +1,6 @@
 from ._anvil_designer import BaseTemplate
 from anvil import *
+import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.tables as tables
@@ -25,7 +26,7 @@ class Base(BaseTemplate):
       self.sign_in.text = email
     else:
      self.sign_in.text = "SignIn"
-     self.toggle_my_courses_link()
+    self.toggle_my_courses_link()
 
   def toggle_my_courses_link(self):
     self.my_houses.visible = anvil.users.get_user() is not None
@@ -47,11 +48,12 @@ class Base(BaseTemplate):
     """This method is called when the link is clicked"""
     user = anvil.users.get_user()
     if user:
-      logout = confirm ("Would you like to logout?")
+      logout = confirm("Would you like to logout?")
       if logout:
         anvil.users.logout()
         self.go_to_home()
-      else:
+    else:
     
-        anvil.users.login_with_form()
-      self.change_sign_in_text()
+    
+       anvil.users.login_with_form()
+    self.change_sign_in_text()

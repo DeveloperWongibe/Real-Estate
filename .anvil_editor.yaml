@@ -5,7 +5,8 @@ unique_ids:
     Houses: '1715247254522806241784946.8473'
     MyHouses: '1715605724207582127364495.399'
   modules: {}
-  server_modules: {}
+  server_modules:
+    HouseDetails: '171577231564789246110714.59764'
   assets:
     house 1.jpg: '1715245941167742652618350.095'
     ouse.jpg: '1715246036627282081583343.31635'
