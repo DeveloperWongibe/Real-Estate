@@ -16,9 +16,10 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: sign_in
-    properties: {text: Sign In, icon: 'fa:sign-in', background: ''}
+    properties: {text: Sign In, icon: 'fa:address-book-o', background: ''}
     type: Link
     event_bindings: {click: sign_in_click}
+    layout_properties: {}
   - name: my_houses
     properties: {text: My Houses, icon: 'fa:home'}
     type: Link
